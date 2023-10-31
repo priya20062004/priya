@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+#header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07)),url(eduford_img/Humanoid.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background:  rgba(192, 192, 192, 0.192);
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#sideNav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background-color: deepskyblue;
+    z-index: 2;
+    transition: 0.5s;
+}
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#menuBtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+ .logo{width: 100px;
+    clip-path: circle();
+    position: absolute;
+    top: 4%;
+    left: 0%;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,.07));
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    position: relative;
+    letter-spacing: 2px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    top: 70px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 0.7em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+.text-box p{
+    margin: 80px 0 20px;
+    font-size: 14px;
+    color: #fff;
+    font-style: italic;
+    top: 80%;
+}
+.text-box a{
+    margin-bottom: 20px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid blue;
+    background: blue;
+    transition: 1s;
+}
+nav .fas{
+    display: none;
+}
+@media screen and (max-width:770px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    } 
+    .nav-links{
+        position: absolute;
+        background: blue;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fas{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/*----course----*/
+#content{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.content-col{
+    flex-basis: 31%;
+    background: rgba(32, 156, 178, 0.329);
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px wheat;
+    cursor: pointer;
+    transition: transform .5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.content-col:hover{
+    box-shadow: 0 0 20px 0px blue;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
+
+
+/*--jobs---*/
+
+#service{
+    width: 100%;
+    padding: 70px 0;
+    background: lightgray;
+    text-align: center;    
+}
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}     
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),lightskyblue);
+    opacity: 0;
+    transition: 1s;
+}
+.single-service:hover .overlay{
+    opacity: 1;
+}    
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border-radius: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.service-desc p{
+    font-size: 14px;
+}
+.single-service:hover .service-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .service-desc p{
+        font-size: 14px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-service:hover .service-desc{
+        bottom: 25% ! important;
+    }
+}
+/*---jobs---*/
+
+
+
+/*---testimonial---*/
+
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+    background: rgba(135, 235, 173, 0.486);
+    text-align: center;
+    top: 20px;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px wheat;
+    cursor: pointer;
+    transition: transform .5s;
+    background: cornsilk;
+}
+.testimonial-col p{
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: skyblue;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.user-info .fas{
+    margin-left: 10px;
+    color: skyblue;
+    font-size: 20px;
+}
+.user-info small{
+    color: blue;
+}
+.testimonial-col:hover{
+    transform: translateY(-7px);
+    color: blueviolet;
+    background: slateblue;
+}
+@media screen and (max-width: 770px){
+    .testimonial-col{
+        flex-basis: 100%;
+    }
+}
+
+
+.cta{
+    width: 100%;
+    padding: 70px 0; 
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 10px;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+/*---cta-----*/
+
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(eduford_img/banner4.jpg);
+    background-size: cover;
+}
+.contact .cont{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .cont h2{
+    font-size: 50px;
+    font-weight: 500;
+} 
+.contact .cont p{
+    font-weight: 300;
+    color: #fff;
+} 
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.container .content-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .content-info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .content-info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .content-info .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .content-info .box .text h3{
+    font-weight: 500;
+    color: blue;
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputBox input,
+.contactform .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox  span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputBox input:focus~span,
+.contactform .inputBox input:valid~span,
+.contactform .inputBox textarea:focus~span,
+.contactform .inputBox textarea:valid~span
+{
+    color: violet;
+    font-size: 12px;
+    transform: translateY(-20%);
+
+}
+.contactform .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media(max-width: 770px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .content-info{
+        margin-bottom: 40px;
+    }
+    .container .content-info,
+    .contactform{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.con{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.con .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.con .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: url(eduford_img/banner2.jpg);
+}
+.content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+}
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .dot{
+     height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+   #dot-2:checked ~ .category label .two,
+   #dot-3:checked ~ .category label .three{
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+   form input[type="radio"]{
+    display: none;
+}
+   form .button{
+    height: 45px;
+    margin: 35px 0
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover{
+ /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+@media(max-width: 584px){
+   .container{
+    max-width: 100%;
+    } 
+
+   form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+    }
+    form .category{
+    width: 100%;
+    }
+    .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+    width: 5px;
+    }
+}
+@media(max-width: 459px){
+    .con .content .category{
+      flex-direction: column;
+    }
+  }
